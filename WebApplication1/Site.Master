@@ -56,7 +56,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Ayush Garg 150905085 & Ayush Acharya</p>
+                <p>&copy; <%: DateTime.Now.Year %> - Ayush Garg 150905085 & Ayush Acharya 150905003</p>
             </footer>
         </div>
     </form>
