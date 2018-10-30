@@ -11,19 +11,13 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                ListBox1.Items.Add(new ListItem("2", "2"));
-                ListBox1.Items.Add(new ListItem("3", "3"));
-                ListBox1.Items.Add(new ListItem("4", "4"));
-                ListBox1.Items.Add(new ListItem("5", "5"));
-                ListBox1.Items.Add(new ListItem("6", "6"));
-            }
+            
         }
 
-        protected void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        protected void Button1_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("AddQuestion.aspx");
+            
         }
     }
 }
