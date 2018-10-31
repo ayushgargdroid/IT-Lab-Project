@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Themes\AddQuestion\StyleSheet1.css" />
+    <Content Include="App_Themes\RegisterProfessor\StyleSheet1.css" />
     <Content Include="css\bootstrap-grid.css" />
     <Content Include="css\bootstrap-grid.min.css" />
     <Content Include="css\bootstrap-reboot.css" />
@@ -81,6 +82,7 @@
     <Content Include="js\jquery-3.3.1.min.js" />
     <Content Include="js\popper.min.js" />
     <Content Include="logo.png" />
+    <Content Include="RegisterProfessor.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -95,6 +97,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegisterProfessor.aspx.cs">
+      <DependentUpon>RegisterProfessor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegisterProfessor.aspx.designer.cs">
+      <DependentUpon>RegisterProfessor.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddQuestion.aspx.cs" Inherits="WebApplication1.Default" MasterPageFile="~/Site.Master" Theme="AddQuestion" %>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="BodyContent" runat="server">
+    <h1>Add Questions</h1>
     <div class="portions">
         Enter the Question<br />
         <asp:TextBox ID="TextBox1" runat="server" SkinID="Question"></asp:TextBox>
