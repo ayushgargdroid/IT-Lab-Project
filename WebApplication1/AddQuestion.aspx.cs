@@ -11,13 +11,19 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+           
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            string question = TextBox1.Text;
+            string c1 = TextBox2.Text;
+            string c2 = TextBox3.Text;
+            string c3 = TextBox4.Text;
+            string c4 = TextBox5.Text;
+            int ans = int.Parse(RadioButtonList1.SelectedValue);
+            int marks = int.Parse(TextBox6.Text);
             Response.Redirect("AddQuestion.aspx");
-            
         }
     }
 }
