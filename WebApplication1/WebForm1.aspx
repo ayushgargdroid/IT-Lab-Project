@@ -15,16 +15,21 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            &nbsp;&nbsp;&nbsp;
             <img class="auto-style1" src="logo.png" /><br />
             <br />
+            &nbsp;
             Email ID&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
             <br />
+            &nbsp;
             Password&nbsp;&nbsp; <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
             <br />
-        </div>
+        &nbsp;</div>
         <p>
-            <asp:Button ID="Button1" runat="server" Text="Log In" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="Button1" runat="server" Text="Log In" OnClick="Button1_Click" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </p>
     </form>
 </body>
