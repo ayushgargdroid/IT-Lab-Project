@@ -18,8 +18,7 @@
             &nbsp;&nbsp;&nbsp;
             <img class="auto-style1" src="logo.png" /><br />
             <br />
-            &nbsp;
-            Email ID&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ID&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
             <br />
             &nbsp;
