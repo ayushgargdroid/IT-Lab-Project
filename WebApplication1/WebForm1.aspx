@@ -21,10 +21,12 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ID&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
             <br />
+            <asp:RequiredFieldValidator Display="Dynamic" ControlToValidate="TextBox2" ErrorMessage="<br />Please enter the ID." runat="server" CssClass="error-msg"></asp:RequiredFieldValidator>
             &nbsp;
             Password&nbsp;&nbsp; <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
             <br />
-        &nbsp;</div>
+       <asp:RequiredFieldValidator Display="Dynamic" ControlToValidate="TextBox3" ErrorMessage="<br />Please enter the password." runat="server" CssClass="error-msg"></asp:RequiredFieldValidator>
+            &nbsp;</div>
         <p>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Button ID="Button1" runat="server" Text="Log In" OnClick="Button1_Click" />
