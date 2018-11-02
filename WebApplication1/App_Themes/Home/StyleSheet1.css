@@ -3,6 +3,7 @@
     background-image: url("../../backimg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
     background-position: center;
 }
 
@@ -15,10 +16,10 @@
     border-radius: 10px;
 }
 
-.portions{
+.portions {
     margin-bottom: 25px;
     margin-top: 25px;
-    opacity:1.0;
+    opacity: 1.0;
 }
 
 .items {
@@ -26,6 +27,6 @@
     margin-top: 5px;
 }
 
-.error-msg{
-    color:red;
+.error-msg {
+    color: red;
 }

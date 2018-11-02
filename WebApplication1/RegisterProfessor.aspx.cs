@@ -13,7 +13,37 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            this.Master.CurrentRegisterProfessor = 1;
+            if (Request.Cookies["UserName"] == null)
+            {
+                Response.Redirect("SignIn.aspx");
+            }
+            else{
+                int exit = 1;
+                SqlConnection sqlConnection = new SqlConnection();
+                sqlConnection.ConnectionString = @"Data Source=dellmac.database.windows.net;Initial Catalog=IT Lab Project;User ID=ayushgarg;Password=@dell123;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+                SqlCommand command = new SqlCommand("SELECT Designation from Professors where Name='" + Request.Cookies["UserName"].Value + "'", sqlConnection);
+                try
+                {
+                    sqlConnection.Open();
+                    SqlDataReader dataReader = command.ExecuteReader();
+                    while (dataReader.Read())
+                    {
+                        if (dataReader["Designation"].ToString() == "Admin")
+                        {
+                            exit = 0;
+                        }
+                    }
+                }
+                finally
+                {
+                    sqlConnection.Close();
+                    if (exit == 1)
+                    {
+                        Response.Redirect("Home.aspx");
+                    }
+                }
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
