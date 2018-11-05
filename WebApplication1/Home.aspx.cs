@@ -11,7 +11,11 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.Master.CurrentHome = 1;
+            if (Request.Cookies["UserName"] == null)
+            {
+                Response.Redirect("SignIn.aspx");
+            }
+            Label1.Text = Request.QueryString["name"];
         }
     }
 }

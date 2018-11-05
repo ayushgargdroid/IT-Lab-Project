@@ -31,13 +31,13 @@ namespace WebApplication1 {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// HomeDiv control.
+        /// navbarSupportedContent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl HomeDiv;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl navbarSupportedContent;
         
         /// <summary>
         /// AddQuestionDiv control.
@@ -49,13 +49,13 @@ namespace WebApplication1 {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl AddQuestionDiv;
         
         /// <summary>
-        /// SetPaperDev control.
+        /// SetPaperDiv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl SetPaperDev;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl SetPaperDiv;
         
         /// <summary>
         /// RegisterProfessorDiv control.
@@ -65,6 +65,24 @@ namespace WebApplication1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl RegisterProfessorDiv;
+        
+        /// <summary>
+        /// PaperDiv control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl PaperDiv;
+        
+        /// <summary>
+        /// LogOutDiv control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl LogOutDiv;
         
         /// <summary>
         /// BodyContent control.

@@ -23,7 +23,7 @@ namespace WebApplication1
             }
             SqlConnection sqlConnection = new SqlConnection();
             sqlConnection.ConnectionString = @"Data Source=dellmac.database.windows.net;Initial Catalog=IT Lab Project;User ID=ayushgarg;Password=@dell123;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-            SqlCommand command = new SqlCommand("SELECT ProfessorId from Professors WHERE Name='" + TextBox1.Text + "'", sqlConnection);
+            SqlCommand command = new SqlCommand("SELECT ProfessorId from Professors WHERE Name='" + Request.Cookies["UserName"].Value + "'", sqlConnection);
             try
             {
                 sqlConnection.Open();
@@ -48,9 +48,10 @@ namespace WebApplication1
             string c4 = TextBox5.Text;
             int ans = int.Parse(RadioButtonList1.SelectedValue);
             int marks = int.Parse(TextBox6.Text);
+            string query = "INSERT INTO Questions (ProfessorId,Question,Choice1,Choice2,Choice3,Choice4,CorrectAns,Marks,Selected) VALUES('" + profID + "','" + question + "','" + c1 + "','" + c2 + "','" + c3 + "','" + c4 + "','" + ans + "','" + marks + "','0')";
             SqlConnection sqlConnection = new SqlConnection();
             sqlConnection.ConnectionString = @"Data Source=dellmac.database.windows.net;Initial Catalog=IT Lab Project;User ID=ayushgarg;Password=@dell123;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-            SqlCommand command = new SqlCommand("INSERT INTO Questions (ProfessorId,Question,Choice1,Choice2,Choice3,Choice4,CorrectAns,Marks,Selected) VALUES('" + profID + "','" + question + "','" + c1 + "','" + c2+"','" + c3 + "','" + c4 + "','" + ans + "','" +  marks + "','0')", sqlConnection);
+            SqlCommand command = new SqlCommand(query, sqlConnection);
             try
             {
                 sqlConnection.Open();

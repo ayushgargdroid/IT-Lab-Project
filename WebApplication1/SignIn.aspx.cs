@@ -22,7 +22,7 @@ namespace WebApplication1
         {
             SqlConnection sqlConnection = new SqlConnection();
             sqlConnection.ConnectionString = @"Data Source=dellmac.database.windows.net;Initial Catalog=IT Lab Project;User ID=ayushgarg;Password=@dell123;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-            SqlCommand command = new SqlCommand("SELECT Password from Professors WHERE Name='" + TextBox1.Text+"'", sqlConnection);
+            SqlCommand command = new SqlCommand("SELECT Subject,ProfessorID,Password from Professors WHERE Name='" + TextBox1.Text+"'", sqlConnection);
             try
             {
                 sqlConnection.Open();
@@ -33,7 +33,12 @@ namespace WebApplication1
                     {
                         Response.Cookies["UserName"].Value = TextBox1.Text;
                         Response.Cookies["UserName"].Expires = DateTime.Now.AddHours(1);
-                        Response.Redirect("Home.aspx");
+                        Response.Cookies["UserId"].Value = dataReader["ProfessorID"].ToString();
+                        Response.Cookies["UserId"].Expires = DateTime.Now.AddHours(1);
+                        Response.Cookies["UserSubject"].Value = dataReader["Subject"].ToString();
+                        Response.Cookies["UserSubject"].Expires = DateTime.Now.AddHours(1);
+                        string site = "Home.aspx?name="+TextBox1.Text;
+                        Response.Redirect(site);
                     }
                 }
             }

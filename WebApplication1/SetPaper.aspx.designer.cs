@@ -10,16 +10,7 @@
 namespace WebApplication1 {
     
     
-    public partial class Home {
-        
-        /// <summary>
-        /// Label1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+    public partial class SetPaper {
         
         /// <summary>
         /// GridView1 control.
@@ -38,17 +29,5 @@ namespace WebApplication1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
-        
-        /// <summary>
-        /// Master property.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated property.
-        /// </remarks>
-        public new WebApplication1.Site Master {
-            get {
-                return ((WebApplication1.Site)(base.Master));
-            }
-        }
     }
 }
